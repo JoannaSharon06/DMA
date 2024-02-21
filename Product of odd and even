@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+  int *arr;
+  int evenmul=1,oddmul=1;
+  int size;
+  printf("Enter the size:");
+  scanf("%d",&size);
+  arr=(int*)malloc(size*sizeof(int));
+  printf("Enter the elements of the array: ");
+  for(int i=0;i<size;i++)
+    {
+      scanf("%d",arr+i);
+      if(*(arr+i)%2==0)
+      {
+        evenmul*=(*(arr+i));
+      }
+      else
+      {
+        oddmul*=(*(arr+i));
+      }
+    }
+  printf("The even product is %d\n",evenmul);
+  printf("The odd product is %d",oddmul);
+  return 0;
+}
