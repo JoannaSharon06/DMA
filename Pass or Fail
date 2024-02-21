@@ -12,7 +12,7 @@ int main(void) {
       {
         printf("Enter the marks of subject %d: ",i+1);
         scanf("%d",arr+i);
-        if(*(arr+i)>=50)
+        if(*(arr+i)>=30)
         {
           pass++;
         }
@@ -21,7 +21,7 @@ int main(void) {
           fail++;
         }
       }
-      if(pass>=3)
+      if(pass==5)
       {
         printf("Student %d has passed \n",j+1);
       }
