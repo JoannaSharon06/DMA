@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void) {
+  int *arr;
+  int i,j,size,pass=0,fail=0;
+  arr=(int*)malloc(5*sizeof(int));
+  printf("Enter the number of students: ");
+  scanf("%d",&size);
+  for(int j=0;j<size;j++)
+    {
+      for(int i=0;i<5;i++)
+      {
+      printf("Enter the marks of subject %d: ",i+1);
+      scanf("%d",arr+i);
+      if(*(arr+i)>=50)
+      {
+        pass++;
+      }
+        else{
+          fail++;
+        }
+      }
+      if(pass>=3)
+      {
+        printf("Student %d has passed \n",j+1);
+      }
+      else{
+        printf("Student %d has failed \n",j+1);
+      }
+    }
+ 
+  return 0;
+}
