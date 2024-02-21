@@ -16,11 +16,11 @@ int main(void) {
   {
     for (j = i + 1; j < size; ++j)
       {
-        if (arr[i] > arr[j]) 
+        if (*(arr+i) > *(arr+j)) 
           {
-            int a =  arr[i];
-            arr[i] = arr[j];
-            arr[j] = a;
+            int a =  *(arr+i);
+            *(arr+i) = *(arr+j);
+            *(arr+j) = a;
           }
       }
   }
